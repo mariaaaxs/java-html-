@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Numero sereto II</title>
+</head>
+<body>
+    <Script>
+        function pulaLinha() {
+            document.write('<br>')
+        }
+        function mostrar(texto){
+        document.write(texto)
+        pulaLinha()
+        }
+
+        let numeroPensado = Math.round(Math.random() * 10)
+
+        let tentativa = 1
+
+        while(tentativa <= 3){
+            let chute = parseInt(prompt('Digite um número e de 0 a 10'))
+
+            if(numeroPensado == chute){
+                mostrar('Você acertou')
+            }else{
+                mostrar('Você errou, tente novamente')
+            }
+            tentativa = tentativa + 1 
+        }
+        
+        mostrar(`O número pensado era ${numeroPensado}`)
+    </Script>
+    
+</body>
+</html>
